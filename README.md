@@ -1,13 +1,11 @@
 # Disaster Response Pipeline Project
 
-![Intro Pic](screenshots/intro.png)
-
 ## Table of Contents
 1. [Description](#description)
 2. [Getting Started](#getting_started)
 	1. [Dependencies](#dependencies)
 	2. [Installing](#installing)
-    3. [File Descriptions](#File Descriptions)
+    	3. [File Descriptions](#File Descriptions)
 	4. [Executing Program](#executing)
 3. [Author](#author)
 4. [Acknowledgement](#acknowledgement)
@@ -20,11 +18,11 @@ This Project is part of Data Science Nanodegree Program by Udacity in collaborat
 The initial dataset contains pre-labelled tweet and messages from real-life disaster. 
 The aim of the project is to build a Natural Language Processing tool that categorize messages.
 
-The Project is divided in the following Sections:
+The Project is divided in three parts:
 
-1. Data Processing, ETL Pipeline to extract data from source, clean data and save them in a proper databse structure
-2. Machine Learning Pipeline to train a model able to classify text message in categories
-3. Web App to show model results in real time. 
+1. Data Processing, ETL Pipeline
+2. Machine Learning Pipeline to classify text message in categories
+3. Web App to show results. 
 
 <a name="getting_started"></a>
 ## Getting Started
@@ -39,9 +37,9 @@ The Project is divided in the following Sections:
 
 <a name="installing"></a>
 ### Installing
-Clone this GIT repository:
+Clone GIT repository:
 ```
-git clone 
+git clone https://github.com/windelmm/DisasterResponse.git
 ```
 <a name="executing"></a>
 
@@ -61,7 +59,7 @@ git clone
 	- disaster_messages.csv
 	- process_data.py
 - \models
-	- classifier.pkl : It is too big(about 2GB size)  to be included in the github.  To run ML pipeline that trains classifier and saves the trained model to classifier.pkl
+	- classifier.pkl
 	- train_classifier.py
 
 ### Executing Program:
@@ -83,7 +81,7 @@ git clone
 
 ## Acknowledgements
 
-* [Udacity](https://www.udacity.com/) for providing such a complete Data Science Nanodegree Program
-* [Figure Eight](https://www.figure-eight.com/) for providing messages dataset to train my model
+* [Udacity](https://www.udacity.com/) 
+* [Figure Eight](https://www.figure-eight.com/)
 
-<a name="screenshots"></a>
+

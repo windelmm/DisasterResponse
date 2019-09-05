@@ -17,6 +17,15 @@ import numpy as np
 import pickle
 
 def load_data(database_filepath):
+    """
+    Loads data from SQL Database
+    Args:
+    database_filepath: Path to saved database file
+    Returns:
+    X pandas_dataframe: Features dataframe
+    Y pandas_dataframe: Target dataframe
+    catNames: Target labels 
+    """
     
     engine = create_engine('sqlite:///' + database_filepath)
     df = pd.read_sql_table('DisasterResponse', engine)
@@ -29,6 +38,15 @@ def load_data(database_filepath):
     return X, y, catNames
 
 def tokenize(text):
+    
+    """
+    Tokenizes text data
+    Args:
+    text str: text data
+    Returns:
+    clean_tokens: Processed text after normalizing, tokenizing and lemmatizing
+    """
+    
     text = re.sub(r'[^a-zA-Z0-9]',' ',text.lower())
     
     words = word_tokenize(text)
@@ -43,6 +61,14 @@ def tokenize(text):
     return clean_tokens
 
 def build_model():
+    
+    """
+    Build model with GridSearchCV
+    
+    Returns:
+    Trained model after performing grid search
+    """
+    
     pipeline = Pipeline([('vect', CountVectorizer(tokenizer=tokenize)),
                          ('tfidf', TfidfTransformer()),
                          ('clf', MultiOutputClassifier(OneVsRestClassifier(LinearSVC())))])
@@ -55,6 +81,15 @@ def build_model():
     return model
 
 def evaluate_model(model, X_test, Y_test, category_names):
+    """
+    Shows model's performance on test data
+    Args:
+    model: trained model
+    X_test: Test features
+    Y_test: Test targets
+    category_names: Target labels
+    """
+       
 
     y_pred = model.predict(X_test)
 
@@ -63,6 +98,13 @@ def evaluate_model(model, X_test, Y_test, category_names):
     print('Accuracy: {}'.format(np.mean(Y_test.values == y_pred)))
 
 def save_model(model, model_filepath):
+    """
+    Saves the model to a Python pickle file    
+    Args:
+    model: Trained model
+    model_filepath: Filepath to save the model
+    """  
+    
     pickle.dump(model, open(model_filepath, 'wb'))
 
 def main():

@@ -3,11 +3,10 @@
 ## Table of Contents
 1. [Description](#description)
 2. [Getting Started](#getting_started)
-	1. [Dependencies](#dependencies)
-	2. [Installing](#installing)
-	
-    	3. [Files](#Files)
-	4. [Executing Program](#executing)
+	* [Dependencies](#dependencies)
+	* [Installing](#installing)
+    	* [Files](#files)
+	* [Executing Program](#executing)
 3. [Author](#author)
 4. [Acknowledgement](#acknowledgement)
 
@@ -16,8 +15,7 @@
 ## Description
 
 This Project is part of Data Science Nanodegree Program by Udacity in collaboration with Figure Eight.
-The initial dataset contains pre-labelled tweet and messages from real-life disaster. 
-The aim of the project is to build a Natural Language Processing tool that categorize messages.
+The initial dataset contains pre-labelled tweet and messages from real-life disaster with the goal to build a Natural Language Processing tool that categorize relevant messages.
 
 The Project is divided in three parts:
 

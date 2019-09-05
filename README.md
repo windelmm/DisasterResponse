@@ -5,7 +5,7 @@
 2. [Getting Started](#getting_started)
 	1. [Dependencies](#dependencies)
 	2. [Installing](#installing)
-    	3. [File Descriptions](#File Descriptions)
+    	3. [Files](#Files)
 	4. [Executing Program](#executing)
 3. [Author](#author)
 4. [Acknowledgement](#acknowledgement)
@@ -43,7 +43,7 @@ git clone https://github.com/windelmm/DisasterResponse.git
 ```
 <a name="executing"></a>
 
-## File Descriptions
+## Files
 - \
 	- README.md
 	- ETL Pipeline Preparation.ipynb
